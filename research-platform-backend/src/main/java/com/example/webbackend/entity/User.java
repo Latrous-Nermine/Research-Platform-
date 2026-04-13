@@ -11,8 +11,8 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Entity  // Indique que cette classe est une entité JPA
-@Table(name = "users") // Spécifie le nom de la table dans la base de données
+@Entity
+@Table(name = "users")
 @Getter
 @Setter
 @NoArgsConstructor

@@ -186,3 +186,48 @@ Consultez **Swagger UI** pour la documentation complète des endpoints.
 4. Les publications approuvées sont visibles sur le fil d'actualité
 5. Les **utilisateurs** peuvent consulter les publications et laisser des **commentaires**
 6. L'**administrateur** gère les utilisateurs et les domaines de recherche
+
+---
+
+## Lancement avec Docker
+
+Cette configuration permet de lancer toute la plateforme (MySQL + backend + frontend) avec une seule commande.
+
+### Services Docker
+
+- **db** : MySQL 8 (port hote `3306`)
+- **backend** : Spring Boot (port hote `8081`)
+- **frontend** : React build + Nginx (port hote `3000`)
+
+### Commandes
+
+Depuis la racine du projet :
+
+```bash
+docker compose up --build
+```
+
+L'application sera accessible sur : `http://localhost:3000`
+
+Le backend sera accessible sur : `http://localhost:8081`
+
+Arreter les conteneurs :
+
+```bash
+docker compose down
+```
+
+Arreter et supprimer aussi le volume de donnees MySQL :
+
+```bash
+docker compose down -v
+```
+
+### Fichiers Docker ajoutes
+
+- `docker-compose.yml`
+- `research-platform-backend/Dockerfile`
+- `research-platform-backend/.dockerignore`
+- `research-platform-frontend/Dockerfile`
+- `research-platform-frontend/nginx.conf`
+- `research-platform-frontend/.dockerignore`

@@ -1,7 +1,7 @@
 {
   "name": "research-platform-frontend",
   "version": "0.1.0",
-  "proxy": "http://localhost:8081",
+  "proxy": "http://backend:8081",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
