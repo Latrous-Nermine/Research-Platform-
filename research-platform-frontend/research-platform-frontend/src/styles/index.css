@@ -1,24 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 
 :root {
-  --science-font-body: "Sora", "Segoe UI", sans-serif;
-  --science-font-title: "Space Grotesk", "Trebuchet MS", sans-serif;
+  --science-font-body: "Inter", "Segoe UI", sans-serif;
+  --science-font-title: "Plus Jakarta Sans", "Trebuchet MS", sans-serif;
 
-  --science-bg: #edf4ff;
+  --science-bg: #F5F3FF;
   --science-surface: #ffffff;
-  --science-surface-soft: #f6fbff;
+  --science-surface-soft: #F0EDFF;
 
-  --science-text: #0f2138;
-  --science-text-soft: #5a7189;
+  --science-text: #1E1B4B;
+  --science-text-soft: #6B7280;
 
-  --science-primary: #1c71ff;
-  --science-primary-strong: #0f57cc;
-  --science-secondary: #00b8d9;
-  --science-accent: #23c9a8;
+  --science-primary: #7C3AED;
+  --science-primary-strong: #6D28D9;
+  --science-secondary: #EC4899;
+  --science-accent: #F59E0B;
 
-  --science-border: #d2e2f7;
-  --science-border-strong: #bfd3ee;
-  --science-shadow: 0 18px 44px -30px rgba(15, 52, 110, 0.46);
+  --science-border: #E0DAF5;
+  --science-border-strong: #C4B5FD;
+  --science-shadow: 0 18px 44px -30px rgba(124, 58, 237, 0.25);
 }
 
 *,
@@ -39,9 +39,10 @@ body {
   color: var(--science-text);
   background-color: var(--science-bg);
   background-image:
-    radial-gradient(circle at 10% 12%, rgba(28, 113, 255, 0.18), transparent 32%),
-    radial-gradient(circle at 88% 8%, rgba(0, 184, 217, 0.2), transparent 27%),
-    linear-gradient(140deg, #edf4ff 0%, #f6fbff 48%, #f2f8ff 100%);
+    radial-gradient(circle at 10% 12%, rgba(124, 58, 237, 0.1), transparent 32%),
+    radial-gradient(circle at 88% 8%, rgba(236, 72, 153, 0.08), transparent 27%),
+    radial-gradient(circle at 50% 90%, rgba(245, 158, 11, 0.06), transparent 35%),
+    linear-gradient(140deg, #F5F3FF 0%, #FEFBFF 48%, #F5F3FF 100%);
   line-height: 1.55;
   overflow-x: hidden;
 }
@@ -52,10 +53,10 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(28, 113, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(28, 113, 255, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(124, 58, 237, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.05) 1px, transparent 1px);
   background-size: 44px 44px;
-  mask-image: radial-gradient(circle at 50% 46%, rgba(0, 0, 0, 0.82) 22%, transparent 84%);
+  mask-image: radial-gradient(circle at 50% 46%, rgba(0, 0, 0, 0.7) 22%, transparent 84%);
   opacity: 0.45;
   z-index: 0;
 }
@@ -93,7 +94,7 @@ a:hover {
 }
 
 ::selection {
-  background: rgba(0, 184, 217, 0.24);
+  background: rgba(124, 58, 237, 0.2);
   color: var(--science-text);
 }
 

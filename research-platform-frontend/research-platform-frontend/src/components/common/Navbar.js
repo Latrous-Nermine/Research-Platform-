@@ -1,7 +1,7 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { Navbar, Nav, Container, Button, Dropdown } from 'react-bootstrap';
-import { PersonCircle, BoxArrowRight, JournalBookmark, HouseDoor, People, Collection } from 'react-bootstrap-icons';
+import { PersonCircle, BoxArrowRight, MortarboardFill, JournalBookmark, HouseDoor, People, Collection } from 'react-bootstrap-icons';
 
 const AppNavbar = () => {
   const { user, logout } = useAuth();
@@ -30,12 +30,15 @@ const AppNavbar = () => {
   );
 
   return (
-    <Navbar bg="white" variant="light" expand="lg" className="shadow-sm">
+    <Navbar variant="light" expand="lg" className="shadow-sm">
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
-          <JournalBookmark className="text-primary me-2" size={24} />
-          <span className="fw-bold">ResearchHub</span>
-
+          <MortarboardFill className="me-2" size={26} style={{ color: '#7C3AED' }} />
+          <span className="fw-bold" style={{
+            background: 'linear-gradient(135deg, #7C3AED, #EC4899)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>ScholarVault</span>
         </Navbar.Brand>
         
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -295,10 +295,10 @@ const renderPublicationImage = (publication) => {
             {/* PDF Icon/Thumbnail Side */}
             <div 
               className="pdf-icon-container d-flex align-items-center justify-content-center"
-              style={{ 
-                background: '#f8f9fa', 
+              style={{
+                background: 'var(--science-surface-soft)',
                 width: '100px',
-                borderRight: '1px solid #dee2e6'
+                borderRight: '1px solid var(--science-border)'
               }}
             >
               <div className="text-center">
@@ -362,7 +362,7 @@ const renderPublicationImage = (publication) => {
           
           .preview-line {
             height: 6px;
-            background-color: #e9ecef;
+            background-color: var(--science-surface-soft);
             border-radius: 3px;
             margin-bottom: 6px;
             width: 100%;
@@ -386,10 +386,10 @@ const renderPublicationImage = (publication) => {
           <div className="d-flex h-100">
             <div 
               className="pdf-icon-container d-flex align-items-center justify-content-center"
-              style={{ 
-                background: '#f8f9fa', 
+              style={{
+                background: 'var(--science-surface-soft)',
                 width: '100px',
-                borderRight: '1px solid #dee2e6'
+                borderRight: '1px solid var(--science-border)'
               }}
             >
               <FileEarmarkPdf size={42} className="text-danger" />
