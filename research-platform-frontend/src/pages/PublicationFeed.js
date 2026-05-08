@@ -616,32 +616,36 @@ const renderPublicationImage = (publication) => {
                     ) : (
                       <>
                         <ListGroup className="mb-3">
-                          {publication.comments?.map(comment => (
-                            <ListGroup.Item key={comment.id} className="border-0">
-                              <div className="d-flex">
-                                <Image 
-                                  src={getImageSrc(comment.user.image || '/person-circle.svg')} 
-                                  roundedCircle 
-                                  width={32} 
-                                  height={32} 
-                                  className="me-2"
-                                  onError={(e) => {
-                                    e.target.onerror = null;
-                                    e.target.src = '/person-circle.svg';
-                                  }}
-                                />
-                                <div>
-                                  <div className="bg-light p-2 rounded">
-                                    <strong>{comment.user.username || 'Unknown'}</strong>
-                                    <p className="mb-0">{comment.content}</p>
+                          {publication.comments?.map(comment => {
+                            const commentAuthor = comment.user || comment.researcher;
+
+                            return (
+                              <ListGroup.Item key={comment.id} className="border-0">
+                                <div className="d-flex">
+                                  <Image 
+                                    src={getImageSrc(commentAuthor?.image || '/person-circle.svg')} 
+                                    roundedCircle 
+                                    width={32} 
+                                    height={32} 
+                                    className="me-2"
+                                    onError={(e) => {
+                                      e.target.onerror = null;
+                                      e.target.src = '/person-circle.svg';
+                                    }}
+                                  />
+                                  <div>
+                                    <div className="bg-light p-2 rounded">
+                                      <strong>{commentAuthor?.username || 'Unknown'}</strong>
+                                      <p className="mb-0">{comment.content}</p>
+                                    </div>
+                                    <small className="text-muted">
+                                      {moment(comment.createdAt).fromNow()}
+                                    </small>
                                   </div>
-                                  <small className="text-muted">
-                                    {moment(comment.createdAt).fromNow()}
-                                  </small>
                                 </div>
-                              </div>
-                            </ListGroup.Item>
-                          ))}
+                              </ListGroup.Item>
+                            );
+                          })}
                           {(!publication.comments || publication.comments.length === 0) && (
                             <ListGroup.Item className="text-muted text-center">
                               No comments yet
